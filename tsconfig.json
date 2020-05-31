@@ -30,6 +30,6 @@
     },
     "types": ["node", "mocha"]
   },
-  "include": ["Src", "Test"],
+  "include": ["Src", "Test", "scripts", "Index.ts"],
   "exclude": ["node_modules"]
 }
