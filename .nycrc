@@ -1,0 +1,20 @@
+{
+  "all": true,
+  "check-coverage": false,
+  "per-file": false,
+  "extension": [
+    ".ts"
+  ],
+  "include": [
+    "Src"
+  ],
+  "require": [
+    "ts-node/register"
+  ],
+  "reporter": [
+    "text",
+    "text-summary"
+  ],
+  "report-dir": "./Coverage",
+  "skip-full": true
+}
