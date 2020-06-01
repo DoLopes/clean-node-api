@@ -6,16 +6,16 @@ import { IRoute } from "Interfaces/Web/Routes/IRoute";
 
 @injectable()
 export class RouterMiddleware implements IMiddleware {
-  @inject(Types.HealthCheckRoute)
-  private readonly healthCheckeRoute!: IRoute;
+  public constructor(
+    @inject(Types.HealthCheckRoute) private readonly healthCheckeRoute: IRoute,
+    @inject(Types.SignUpRoute) private readonly signUpRoute: IRoute,
+  ) {}
 
   public configure(server: Express): void {
     const router = Router();
 
-    // eslint-disable-next-line no-console
-    console.log("passei >>>");
-
     this.healthCheckeRoute.configure(router);
+    this.signUpRoute.configure(router);
 
     server.use(router);
   }

@@ -63,7 +63,6 @@
     "max-lines-per-function": ["error", 20],
     "max-statements": ["error", 10],
     "max-nested-callbacks": ["error", 3],
-    "max-params": ["error", 3],
     "max-statements-per-line": ["error"],
     "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
     "no-multi-assign": ["error"],

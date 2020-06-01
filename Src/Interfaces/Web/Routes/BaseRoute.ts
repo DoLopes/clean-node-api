@@ -10,8 +10,7 @@ import { IRoute } from "Interfaces/Web/Routes/IRoute";
 
 @injectable()
 export abstract class BaseRoute implements IRoute {
-  @inject(Types.Mediator)
-  protected readonly mediator!: IMediator;
+  public constructor(@inject(Types.Mediator) protected readonly mediator: IMediator) {}
 
   public async buildInput(request: Request): Promise<IRequest> {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
@@ -36,11 +35,7 @@ export abstract class BaseRoute implements IRoute {
 
       response.status(getStatusCodeForApplicationEvent(applicationResult));
 
-      if (result !== undefined) {
-        response.json(result);
-      }
-
-      response.end();
+      response.send(result);
     } catch (error) {
       response.sendStatus(HttpStatusCode.INTERNAL_SERVER_ERROR);
     }

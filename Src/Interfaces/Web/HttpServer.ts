@@ -8,8 +8,7 @@ import { IMiddleware } from "Interfaces/Web/Middlewares/IMiddleware";
 
 @injectable()
 export class HttpServer {
-  @inject(Types.RouterMiddleware)
-  private readonly routerMiddleware!: IMiddleware;
+  public constructor(@inject(Types.RouterMiddleware) private readonly routerMiddleware: IMiddleware) {}
 
   public create(): Express {
     const server = express();
