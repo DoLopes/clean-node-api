@@ -1,14 +1,13 @@
 import { Container as ContainerInstance, inject, injectable } from "inversify";
-import { IMediator } from "Shared/Interfaces/Web/Contracts/IMediator";
+import { IMediator } from "Shared/Application/Contracts/IMediator";
 import { Container } from "Shared/Interfaces/DI/Types";
-import { IRequest } from "Shared/Interfaces/Web/Contracts/IRequest";
-import { IHandler } from "Shared/Interfaces/Web/Contracts/IHandler";
+import { IHandler } from "Shared/Application/Contracts/IHandler";
 
 @injectable()
 export class Mediator implements IMediator {
   public constructor(@inject(Container) private readonly container: ContainerInstance) {}
 
-  public async send<R>(query: IRequest): Promise<R> {
+  public async send<R>(query: object): Promise<R> {
     const handlerName = Symbol.for(`${query.constructor.name}Handler`);
 
     const handler = this.container.get<IHandler<R>>(handlerName);

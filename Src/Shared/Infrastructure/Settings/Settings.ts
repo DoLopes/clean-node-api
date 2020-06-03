@@ -1,5 +1,5 @@
 import { ISettings } from "Shared/Infrastructure/Settings/ISettings";
-import { Nullable } from "Shared/Infrastructure/Helpers/Nullable";
+import { Nullable } from "Core/Helpers/Nullable";
 
 export class Settings implements ISettings {
   public getDbDebug(): boolean {

@@ -1,8 +1,7 @@
 import { Request, Response, Router } from "express";
 import { inject, injectable } from "inversify";
 import * as Types from "Shared/Interfaces/DI/Types";
-import { IMediator } from "Shared/Interfaces/Web/Contracts/IMediator";
-import { IRequest } from "Shared/Interfaces/Web/Contracts/IRequest";
+import { IMediator } from "Shared/Application/Contracts/IMediator";
 import { getStatusCodeForApplicationEvent } from "Shared/Interfaces/Web/Helpers/GetStatusCodeForApplicationEvent";
 import { ApplicationResult } from "Shared/Application/Entities/ApplicationResult";
 import { HttpStatusCode } from "Shared/Interfaces/Web/Enums/HttpStatusCode";
@@ -12,7 +11,7 @@ import { IRoute } from "Shared/Interfaces/Web/Routes/IRoute";
 export abstract class BaseRoute implements IRoute {
   public constructor(@inject(Types.Mediator) protected readonly mediator: IMediator) {}
 
-  public async buildInput(request: Request): Promise<IRequest> {
+  public async buildInput(request: Request): Promise<object> {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return {
       ...request.query,

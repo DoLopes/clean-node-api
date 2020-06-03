@@ -4,8 +4,8 @@ import { HttpServer } from "Shared/Interfaces/Web/HttpServer";
 import { IMiddleware } from "Shared/Interfaces/Web/Middlewares/IMiddleware";
 import { RouterMiddleware } from "Shared/Interfaces/Web/Middlewares/RouterMiddleware";
 import { HealthCheckRoute } from "Shared/Interfaces/Web/Routes/HealthCheck/HealthCheckRoute";
-import { Mediator } from "Shared/Interfaces/Web/Contracts/Mediator";
-import { IMediator } from "Shared/Interfaces/Web/Contracts/IMediator";
+import { Mediator } from "Shared/Application/Contracts/Mediator";
+import { IMediator } from "Shared/Application/Contracts/IMediator";
 import { AccountServiceProvider } from "Account/Interfaces/DI/AccountProvider";
 
 export class ServiceProvider {
