@@ -1,10 +1,10 @@
 import { Container } from "inversify";
 import * as Types from "Account/Interfaces/DI/Types";
-import { SignUpCommandHandler } from "Account/Application/Commands/SignUp/SignUpCommandHandler";
+import { SignUpCommandHandler } from "Account/Application/SignUp/SignUpCommandHandler";
 import { SignUpRoute } from "Account/Interfaces/Web/Routes/SignUp/SignUpRoute";
-import { IHandler } from "Shared/Application/Contracts/IHandler";
+import { IHandler } from "Core/Contracts/IHandler";
 import { AccountRouterMiddleware } from "Account/Interfaces/Web/Middlewares/AccountRouterMiddleware";
-import { IMiddleware } from "Shared/Interfaces/Web/Middlewares/IMiddleware";
+import { IMiddleware } from "Core/Contracts/IMiddleware";
 
 export class AccountServiceProvider {
   public static register(container: Container): Container {

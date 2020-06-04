@@ -1,4 +1,4 @@
-import { ISettings } from "Shared/Infrastructure/Settings/ISettings";
+import { ISettings } from "Core/Settings/ISettings";
 import { Nullable } from "Core/Helpers/Nullable";
 
 export class Settings implements ISettings {

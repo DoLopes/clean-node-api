@@ -1,8 +1,8 @@
 import "reflect-metadata";
 
-import * as Types from "Shared/Interfaces/DI/Types";
-import { ServiceProvider } from "Shared/Interfaces/DI/ServiceProvider";
-import { HttpServer } from "Shared/Interfaces/Web/HttpServer";
+import * as Types from "Types";
+import { ServiceProvider } from "ServiceProvider";
+import { HttpServer } from "Server/HttpServer";
 
 const port = process.env.PORT ?? "3000";
 
