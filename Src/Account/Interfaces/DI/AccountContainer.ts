@@ -6,7 +6,7 @@ import { IHandler } from "Core/Contracts/IHandler";
 import { AccountRouterMiddleware } from "Account/Interfaces/Web/Middlewares/AccountRouterMiddleware";
 import { IMiddleware } from "Core/Contracts/IMiddleware";
 
-export class AccountServiceProvider {
+export class AccountContainer {
   public static register(container: Container): Container {
     container.bind<SignUpRoute>(Types.SignUpRoute).to(SignUpRoute);
     container.bind<IHandler>(Types.SignUpCommandHandler).to(SignUpCommandHandler);

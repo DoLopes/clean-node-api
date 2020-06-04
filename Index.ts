@@ -1,12 +1,12 @@
 import "reflect-metadata";
 
 import * as Types from "Types";
-import { ServiceProvider } from "ServiceProvider";
+import { DIContainer } from "DIContainer";
 import { HttpServer } from "Server/HttpServer";
 
 const port = process.env.PORT ?? "3000";
 
-const container = ServiceProvider.createContainer();
+const container = DIContainer.create();
 
 const server = container.get<HttpServer>(Types.HttpServer).create();
 
