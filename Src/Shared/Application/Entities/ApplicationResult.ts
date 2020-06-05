@@ -1,4 +1,4 @@
-import { ApplicationEvents } from "Core/Result/ApplicationEvents";
+import { ApplicationEvents } from "Shared/Application/Enums/ApplicationEvents";
 
 export class ApplicationResult<T = object> {
   public readonly event: ApplicationEvents;

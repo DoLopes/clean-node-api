@@ -4,7 +4,7 @@ import express, { Express } from "express";
 import helmet from "helmet";
 import { inject, injectable } from "inversify";
 import * as AccountTypes from "Account/Interfaces/DI/Types";
-import { IMiddleware } from "Core/Contracts/IMiddleware";
+import { IMiddleware } from "Shared/Interfaces/Web/Contracts/IMiddleware";
 
 @injectable()
 export class HttpServer {

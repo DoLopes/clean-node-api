@@ -1,8 +1,8 @@
 import { Container } from "inversify";
-import * as Types from "Types";
-import { HttpServer } from "Server/HttpServer";
-import { Mediator } from "Core/Contracts/Mediator";
-import { IMediator } from "Core/Contracts/IMediator";
+import * as Types from "Shared/Interfaces/DI/Types";
+import { HttpServer } from "Shared/Interfaces/Web/HttpServer";
+import { Mediator } from "Shared/Interfaces/Web/Contracts/Mediator";
+import { IMediator } from "Shared/Interfaces/Web/Contracts/IMediator";
 import { AccountContainer } from "Account/Interfaces/DI/AccountContainer";
 
 export class DIContainer {

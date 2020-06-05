@@ -1,6 +1,6 @@
 import { injectable } from "inversify";
 import { Request, Router } from "express";
-import { BaseRoute } from "Core/Contracts/BaseRoute";
+import { BaseRoute } from "Shared/Interfaces/Web/Contracts/BaseRoute";
 import { SignUpCommand } from "Account/Application/SignUp/SignUpCommand";
 import { SignUpRequest } from "Account/Interfaces/Web/Routes/SignUp/SignUpResquet";
 

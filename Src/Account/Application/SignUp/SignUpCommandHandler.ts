@@ -1,6 +1,6 @@
 import { injectable } from "inversify";
-import { ApplicationResult } from "Core/Result/ApplicationResult";
-import { ApplicationEvents } from "Core/Result/ApplicationEvents";
+import { ApplicationResult } from "Shared/Application/Entities/ApplicationResult";
+import { ApplicationEvents } from "Shared/Application/Enums/ApplicationEvents";
 import { SignUpCommand } from "Account/Application/SignUp/SignUpCommand";
 
 @injectable()

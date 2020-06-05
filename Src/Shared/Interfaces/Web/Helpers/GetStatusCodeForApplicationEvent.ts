@@ -1,6 +1,6 @@
-import { ApplicationResult } from "Core/Result/ApplicationResult";
-import { ApplicationEvents } from "Core/Result/ApplicationEvents";
-import { HttpStatusCode } from "Core/Enums/HttpStatusCode";
+import { ApplicationResult } from "Shared/Application/Entities/ApplicationResult";
+import { ApplicationEvents } from "Shared/Application/Enums/ApplicationEvents";
+import { HttpStatusCode } from "Shared/Interfaces/Web/Enums/HttpStatusCode";
 
 const mapping = {
   [ApplicationEvents.SUCCESS]: HttpStatusCode.SUCCESS,

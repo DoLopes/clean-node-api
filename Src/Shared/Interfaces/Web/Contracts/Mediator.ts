@@ -1,7 +1,7 @@
 import { Container as ContainerInstance, inject, injectable } from "inversify";
-import { IMediator } from "Core/Contracts/IMediator";
-import { Container } from "Types";
-import { IHandler } from "Core/Contracts/IHandler";
+import { IMediator } from "Shared/Interfaces/Web/Contracts/IMediator";
+import { Container } from "Shared/Interfaces/DI/Types";
+import { IHandler } from "Shared/Interfaces/Web/Contracts/IHandler";
 
 @injectable()
 export class Mediator implements IMediator {
