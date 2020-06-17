@@ -66,5 +66,8 @@
     "tsdef": "0.0.13",
     "typescript": "^3.9.3",
     "uuid": "^8.1.0"
+  },
+  "dependencies": {
+    "monapt": "^2.1.0"
   }
 }
