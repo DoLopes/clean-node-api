@@ -2,7 +2,7 @@ import { Express, Router } from "express";
 import { inject, injectable } from "inversify";
 import * as Types from "Account/Interfaces/DI/Types";
 import { IMiddleware } from "Shared/Interfaces/Web/Contracts/IMiddleware";
-import { IRoute } from "Shared/Interfaces/Web/Contracts/IRoute";
+import { IRoute } from "Shared/Interfaces/Web/Resources/IRoute";
 
 @injectable()
 export class AccountRouterMiddleware implements IMiddleware {
