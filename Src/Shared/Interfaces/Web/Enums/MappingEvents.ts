@@ -1,8 +1,7 @@
-import { ApplicationResult } from "Shared/Application/Entities/ApplicationResult";
-import { ApplicationEvents } from "Shared/Application/Enums/ApplicationEvents";
 import { HttpStatusCode } from "Shared/Interfaces/Web/Enums/HttpStatusCode";
+import { ApplicationEvents } from "Shared/Application/Enums/ApplicationEvents";
 
-const mapping = {
+export const MappingEvents = {
   [ApplicationEvents.SUCCESS]: HttpStatusCode.SUCCESS,
   [ApplicationEvents.SUCCESS_CREATED]: HttpStatusCode.CREATED,
   [ApplicationEvents.INVALID_EXECUTION]: HttpStatusCode.BAD_REQUEST_ERROR,
@@ -12,12 +11,4 @@ const mapping = {
   [ApplicationEvents.CONFLICT]: HttpStatusCode.CONFLICT,
   [ApplicationEvents.NOT_ALLOWED]: HttpStatusCode.FORBIDDEN,
   [ApplicationEvents.DEFAULT_OUTPUT]: HttpStatusCode.SUCCESS,
-};
-
-export const getStatusCodeForApplicationEvent = (applicationResult: ApplicationResult): HttpStatusCode => {
-  if (applicationResult.event === ApplicationEvents.SUCCESS && applicationResult.message === undefined) {
-    return HttpStatusCode.NO_CONTENT;
-  }
-
-  return mapping[applicationResult.event];
 };
